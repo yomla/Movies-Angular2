@@ -11,3 +11,14 @@
       <th>Genres</th>
     </tr>
   </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">  
+          <td>{{ movie.Name }}</td>
+          <td>{{ movie.Director }}</td>
+          <td>{{ movie.ImageUrl }}</td>
+          <td>{{ movie.Duration }}</td>
+          <td>{{ movie.ReleaseDate }}</td>
+          <td>{{ movie.Genres }}</td>      
+    </tr>
+  </tbody>
+</table>
