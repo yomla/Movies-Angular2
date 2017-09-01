@@ -1,3 +1,14 @@
-<p>
-  search works!
-</p>
+
+<form #searchForm="ngForm" (ngSubmit)="submitSearch()">
+
+  <div class="input-group col-md-5 pl-0 my-lg-4 my-2">
+    
+    <input #movies name="searchInput" type="text" class="form-control" minlength="3" [(ngModel)]="searchInput" >
+    
+    <!-- <div *ngIf="searchInput.errors.minlength">
+        Search must have at least 2 characters
+      </div> -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">Search</button>
+  </div>
+</form>
